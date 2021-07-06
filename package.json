@@ -1,5 +1,5 @@
 {
-  "name": "@electron-builder/monorepo",
+  "name": "@cnet/electron-builder-cnet",
   "private": true,
   "license": "MIT",
   "lint-staged": {

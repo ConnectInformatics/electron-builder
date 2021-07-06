@@ -18,7 +18,7 @@ import { execWine } from "../../wine"
 import { WinPackager } from "../../winPackager"
 import { archive, ArchiveOptions } from "../archive"
 import { appendBlockmap, configureDifferentialAwareArchiveOptions, createBlockmap, createNsisWebDifferentialUpdateInfo } from "../differentialUpdateInfoBuilder"
-import { getWindowsInstallationDirName } from "../targetUtil"
+// import { getWindowsInstallationDirName } from "../targetUtil"
 import { addCustomMessageFileInclude, createAddLangsMacro, LangConfigurator } from "./nsisLang"
 import { computeLicensePage } from "./nsisLicense"
 import { NsisOptions, PortableOptions } from "./nsisOptions"
@@ -178,16 +178,17 @@ export class NsisTarget extends Target {
       APP_GUID: guid,
       // Windows bug - entry in Software\Microsoft\Windows\CurrentVersion\Uninstall cannot have \ symbols (dir)
       UNINSTALL_APP_KEY: uninstallAppKey,
-      PRODUCT_NAME: appInfo.productName,
-      PRODUCT_FILENAME: appInfo.productFilename,
-      APP_FILENAME: getWindowsInstallationDirName(appInfo, !oneClick || isPerMachine),
-      APP_DESCRIPTION: appInfo.description,
+      // PRODUCT_NAME: appInfo.productName,
+      // PRODUCT_FILENAME: appInfo.productFilename,
+      // APP_FILENAME: getWindowsInstallationDirName(appInfo, !oneClick || isPerMachine),
+      // APP_DESCRIPTION: appInfo.description,
+      EXE_NAME: appInfo.productName,
       VERSION: appInfo.version,
 
       PROJECT_DIR: packager.projectDir,
       BUILD_RESOURCES_DIR: packager.info.buildResourcesDir,
 
-      APP_PACKAGE_NAME: appInfo.name,
+      //APP_PACKAGE_NAME: appInfo.name,
     }
     if (uninstallAppKey !== guid) {
       defines.UNINSTALL_REGISTRY_KEY_2 = `Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\${guid}`
@@ -206,8 +207,8 @@ export class NsisTarget extends Target {
       if (isPortable) {
         commands.Icon = `"${iconPath}"`
       } else {
-        defines.MUI_ICON = iconPath
-        defines.MUI_UNICON = iconPath
+        // defines.MUI_ICON = iconPath
+        // defines.MUI_UNICON = iconPath
       }
     }
 
@@ -471,7 +472,7 @@ export class NsisTarget extends Target {
       defines.MENU_FILENAME = commonOptions.menuCategory
     }
 
-    defines.SHORTCUT_NAME = commonOptions.shortcutName
+    //defines.SHORTCUT_NAME = commonOptions.shortcutName
 
     if (options.deleteAppDataOnUninstall) {
       defines.DELETE_APP_DATA_ON_UNINSTALL = null
@@ -481,12 +482,12 @@ export class NsisTarget extends Target {
       const uninstallerIcon = await packager.getResource(options.uninstallerIcon, "uninstallerIcon.ico")
       if (uninstallerIcon != null) {
         // we don't need to copy MUI_UNICON (defaults to app icon), so, we have 2 defines
-        defines.UNINSTALLER_ICON = uninstallerIcon
-        defines.MUI_UNICON = uninstallerIcon
+        // defines.UNINSTALLER_ICON = uninstallerIcon
+        // defines.MUI_UNICON = uninstallerIcon
       }
     })
 
-    defines.UNINSTALL_DISPLAY_NAME = packager.expandMacro(options.uninstallDisplayName || "${productName} ${version}", null, {}, false)
+    //defines.UNINSTALL_DISPLAY_NAME = packager.expandMacro(options.uninstallDisplayName || "${productName} ${version}", null, {}, false)
     if (commonOptions.isCreateDesktopShortcut === DesktopShortcutCreationPolicy.NEVER) {
       defines.DO_NOT_CREATE_DESKTOP_SHORTCUT = null
     }
@@ -513,7 +514,7 @@ export class NsisTarget extends Target {
 
     // electron uses product file name as app data, define it as well to remove on uninstall
     if (defines.APP_FILENAME !== appInfo.productFilename) {
-      defines.APP_PRODUCT_FILENAME = appInfo.productFilename
+      // defines.APP_PRODUCT_FILENAME = appInfo.productFilename
     }
 
     if (this.isWebInstaller) {
@@ -659,24 +660,24 @@ export class NsisTarget extends Target {
     if (fileAssociations.length !== 0) {
       scriptGenerator.include(path.join(path.join(nsisTemplatesDir, "include"), "FileAssociation.nsh"))
       if (isInstaller) {
-        const registerFileAssociationsScript = new NsisScriptGenerator()
+        // const registerFileAssociationsScript = new NsisScriptGenerator()
         for (const item of fileAssociations) {
           const extensions = asArray(item.ext).map(normalizeExt)
-          for (const ext of extensions) {
+          for (const _ext of extensions) {
             const customIcon = await packager.getResource(getPlatformIconFileName(item.icon, false), `${extensions[0]}.ico`)
-            let installedIconPath = "$appExe,0"
+            //let installedIconPath = "$appExe,0"
             if (customIcon != null) {
-              installedIconPath = `$INSTDIR\\resources\\${path.basename(customIcon)}`
-              registerFileAssociationsScript.file(installedIconPath, customIcon)
+              //installedIconPath = `$INSTDIR\\resources\\${path.basename(customIcon)}`
+              //registerFileAssociationsScript.file(installedIconPath, customIcon)
             }
 
-            const icon = `"${installedIconPath}"`
-            const commandText = `"Open with ${packager.appInfo.productName}"`
-            const command = '"$appExe $\\"%1$\\""'
-            registerFileAssociationsScript.insertMacro("APP_ASSOCIATE", `"${ext}" "${item.name || ext}" "${item.description || ""}" ${icon} ${commandText} ${command}`)
+            //const icon = `"${installedIconPath}"`
+            //const commandText = `"Open with ${packager.appInfo.productName}"`
+            //const command = '"$appExe $\\"%1$\\""'
+            //registerFileAssociationsScript.insertMacro("APP_ASSOCIATE", `"${ext}" "${item.name || ext}" "${item.description || ""}" ${icon} ${commandText} ${command}`)
           }
         }
-        scriptGenerator.macro("registerFileAssociations", registerFileAssociationsScript)
+        //scriptGenerator.macro("registerFileAssociations", registerFileAssociationsScript)
       } else {
         const unregisterFileAssociationsScript = new NsisScriptGenerator()
         for (const item of fileAssociations) {

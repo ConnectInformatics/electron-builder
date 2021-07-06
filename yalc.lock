@@ -1,0 +1,53 @@
+{
+  "version": "v1",
+  "packages": {
+    "app-builder-lib": {
+      "signature": "6bc1c037efcf27275cf489f9f31318be",
+      "pure": true
+    },
+    "builder-util": {
+      "signature": "9566ed852093475e08a076520a430190",
+      "pure": true
+    },
+    "builder-util-runtime": {
+      "signature": "ea821af4dc61a880af9d170d0bf9dae2",
+      "pure": true
+    },
+    "dmg-builder": {
+      "signature": "dad4167e564b87acf17db1a1b92a834a",
+      "pure": true
+    },
+    "electron-builder": {
+      "signature": "e8f637e1aad161f7ec4209be2854e49b",
+      "pure": true
+    },
+    "electron-publish": {
+      "signature": "2e630bd9950cbc03057ccb00ad681dd7",
+      "pure": true
+    },
+    "electron-builder-squirrel-windows": {
+      "signature": "45802d3ca293563fbce0a95923a12474",
+      "pure": true
+    },
+    "electron-forge-maker-appimage": {
+      "signature": "c51076dd7e0df06f887b7cd9625ecf96",
+      "pure": true
+    },
+    "electron-forge-maker-nsis": {
+      "signature": "990954705ab49bcd36b63384c38c13ba",
+      "pure": true
+    },
+    "electron-forge-maker-nsis-web": {
+      "signature": "ef04d1646cefae3ae3a54fb4c6adf206",
+      "pure": true
+    },
+    "electron-forge-maker-snap": {
+      "signature": "6e4c24d0a0a18c3926ea6039715c8e50",
+      "pure": true
+    },
+    "electron-updater": {
+      "signature": "8482cb11972e0c265d1e8be1ac750fef",
+      "pure": true
+    }
+  }
+}
