@@ -63,6 +63,11 @@ export abstract class AppUpdater extends EventEmitter {
   /**
    * Get the update channel. Not applicable for GitHub. Doesn't return `channel` from the update configuration, only if was previously set.
    */
+
+  get updatePath(): string | null {
+    return this.downloadedUpdateHelper ? this.downloadedUpdateHelper.cacheDirForPendingUpdate : null;
+  }
+
   get channel(): string | null {
     return this._channel
   }
