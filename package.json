@@ -1,5 +1,6 @@
 {
-  "name": "@cnet/electron-builder-cnet",
+  "name": "cnet-electron-builder",
+  "version": "0.0.1",
   "private": true,
   "license": "MIT",
   "lint-staged": {
