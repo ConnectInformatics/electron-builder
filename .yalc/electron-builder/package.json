@@ -1,7 +1,7 @@
 {
-  "name": "electron-builder",
+  "name": "@cnet/electron-builder",
   "description": "A complete solution to package and build a ready for distribution Electron app for MacOS, Windows and Linux with “auto update” support out of the box",
-  "version": "22.11.8",
+  "version": "0.0.3",
   "main": "out/index.js",
   "files": [
     "out"
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/electron-userland/electron-builder.git",
+    "url": "git+https://github.com/ConnectInformatics/electron-builder.git",
     "directory": "packages/electron-builder"
   },
   "engines": {
