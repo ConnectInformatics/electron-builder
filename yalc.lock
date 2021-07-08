@@ -2,51 +2,51 @@
   "version": "v1",
   "packages": {
     "app-builder-lib": {
-      "signature": "6bc1c037efcf27275cf489f9f31318be",
+      "signature": "8f0f4fabef3f33c208e258e00d8f2e11",
       "pure": true
     },
     "builder-util": {
-      "signature": "9566ed852093475e08a076520a430190",
+      "signature": "f5d942429af6c4dfd97b4bb807d7b5b0",
       "pure": true
     },
     "builder-util-runtime": {
-      "signature": "ea821af4dc61a880af9d170d0bf9dae2",
+      "signature": "d622077f47933655d197e540cfc492e3",
       "pure": true
     },
     "dmg-builder": {
-      "signature": "dad4167e564b87acf17db1a1b92a834a",
+      "signature": "409c5acd6b952bc3b90663c8bbe56b61",
       "pure": true
     },
     "electron-builder": {
-      "signature": "e8f637e1aad161f7ec4209be2854e49b",
+      "signature": "a2ebc1aa6e30dd2fa7472a21c1f592e8",
       "pure": true
     },
     "electron-publish": {
-      "signature": "2e630bd9950cbc03057ccb00ad681dd7",
+      "signature": "b9bc301cfc94877de0dc0195074aa01b",
       "pure": true
     },
     "electron-builder-squirrel-windows": {
-      "signature": "45802d3ca293563fbce0a95923a12474",
+      "signature": "43ea6c0f610018475998694a29b75745",
       "pure": true
     },
     "electron-forge-maker-appimage": {
-      "signature": "c51076dd7e0df06f887b7cd9625ecf96",
+      "signature": "59b25e5e4ca22065b6ad1a7e9a4e1daf",
       "pure": true
     },
     "electron-forge-maker-nsis": {
-      "signature": "990954705ab49bcd36b63384c38c13ba",
+      "signature": "1d76c8289cc8e89aa32cde9309129e34",
       "pure": true
     },
     "electron-forge-maker-nsis-web": {
-      "signature": "ef04d1646cefae3ae3a54fb4c6adf206",
+      "signature": "51bb11892f96a2365609b6f2a5066ee0",
       "pure": true
     },
     "electron-forge-maker-snap": {
-      "signature": "6e4c24d0a0a18c3926ea6039715c8e50",
+      "signature": "5c39380cd66c3343995115ac8527e121",
       "pure": true
     },
     "electron-updater": {
-      "signature": "937a8e3256b9234bcee7c68d87f917cf",
+      "signature": "68a7fc5dd96b38436b6c5dfaf923a889",
       "pure": true
     }
   }

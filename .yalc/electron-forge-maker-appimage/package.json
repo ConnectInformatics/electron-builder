@@ -1,6 +1,6 @@
 {
   "name": "electron-forge-maker-appimage",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "main.js",
   "author": "Vladimir Krivosheev",
   "license": "MIT",
@@ -9,13 +9,13 @@
     "url": "git+https://github.com/ConnectInformatics/electron-builder.git",
     "directory": "packages/electron-forge-maker-appimage"
   },
-  "bugs": "https://github.com/electron-userland/electron-builder/issues",
-  "homepage": "https://github.com/electron-userland/electron-builder",
+  "bugs": "https://github.com/connectinformatics/electron-builder/issues",
+  "homepage": "https://github.com/connectinformatics/electron-builder",
   "files": [
     "*.js"
   ],
   "dependencies": {
-    "app-builder-lib": "22.11.8"
+    "app-builder-lib": "0.0.5"
   },
-  "yalcSig": "c51076dd7e0df06f887b7cd9625ecf96"
+  "yalcSig": "59b25e5e4ca22065b6ad1a7e9a4e1daf"
 }

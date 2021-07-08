@@ -1,6 +1,6 @@
 {
   "name": "builder-util",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "out/util.js",
   "author": "Vladimir Krivosheev",
   "license": "MIT",
@@ -9,8 +9,8 @@
     "url": "git+https://github.com/ConnectInformatics/electron-builder.git",
     "directory": "packages/builder-util"
   },
-  "bugs": "https://github.com/electron-userland/electron-builder/issues",
-  "homepage": "https://github.com/electron-userland/electron-builder",
+  "bugs": "https://github.com/connectinformatics/electron-builder/issues",
+  "homepage": "https://github.com/connectinformatics/electron-builder",
   "files": [
     "out"
   ],
@@ -20,7 +20,7 @@
     "@types/fs-extra": "^9.0.11",
     "app-builder-bin": "3.7.1",
     "bluebird-lst": "^1.0.9",
-    "builder-util-runtime": "8.7.7",
+    "builder-util-runtime": "0.0.5",
     "chalk": "^4.1.1",
     "debug": "^4.3.2",
     "fs-extra": "^10.0.0",
@@ -31,5 +31,5 @@
     "temp-file": "^3.4.0"
   },
   "typings": "./out/util.d.ts",
-  "yalcSig": "9566ed852093475e08a076520a430190"
+  "yalcSig": "f5d942429af6c4dfd97b4bb807d7b5b0"
 }

@@ -1,16 +1,16 @@
 {
   "name": "builder-util",
-  "version": "22.11.8",
+  "version": "0.0.5",
   "main": "out/util.js",
   "author": "Vladimir Krivosheev",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/electron-userland/electron-builder.git",
+    "url": "git+https://github.com/ConnectInformatics/electron-builder.git",
     "directory": "packages/builder-util"
   },
-  "bugs": "https://github.com/electron-userland/electron-builder/issues",
-  "homepage": "https://github.com/electron-userland/electron-builder",
+  "bugs": "https://github.com/connectinformatics/electron-builder/issues",
+  "homepage": "https://github.com/connectinformatics/electron-builder",
   "files": [
     "out"
   ],
