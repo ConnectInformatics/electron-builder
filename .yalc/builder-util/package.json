@@ -1,5 +1,5 @@
 {
-  "name": "builder-util",
+  "name": "@cnet/builder-util",
   "version": "0.0.5",
   "main": "out/util.js",
   "author": "Vladimir Krivosheev",

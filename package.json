@@ -1,7 +1,7 @@
 {
   "name": "@cnet/electron-builder",
-  "version": "0.0.7",
-  "private": false,
+  "version": "0.0.8",
+  "private": true,
   "license": "MIT",
   "lint-staged": {
     "packages/**/*.ts": "eslint",

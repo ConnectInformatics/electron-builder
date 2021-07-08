@@ -1,5 +1,5 @@
 {
-  "name": "electron-builder-squirrel-windows",
+  "name": "@cnet/electron-builder-squirrel-windows",
   "version": "0.0.5",
   "main": "out/SquirrelWindowsTarget.js",
   "author": "Vladimir Krivosheev",

@@ -1,5 +1,5 @@
 {
-  "name": "builder-util-runtime",
+  "name": "@cnet/builder-util-runtime",
   "version": "0.0.5",
   "main": "out/index.js",
   "author": "Vladimir Krivosheev",

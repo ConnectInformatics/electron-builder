@@ -1,5 +1,5 @@
 {
-	"name": "dmg-builder",
+	"name": "@cnet/dmg-builder",
 	"version": "0.0.5",
 	"main": "out/dmgUtil.js",
 	"author": "Vladimir Krivosheev",
