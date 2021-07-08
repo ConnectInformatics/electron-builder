@@ -15,7 +15,7 @@
     "*.js"
   ],
   "dependencies": {
-    "app-builder-lib": "0.0.5"
+    "@cnet/app-builder-lib": "0.0.5"
   },
   "yalcSig": "5c39380cd66c3343995115ac8527e121"
 }

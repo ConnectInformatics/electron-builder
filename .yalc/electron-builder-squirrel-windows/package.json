@@ -15,9 +15,9 @@
     "out"
   ],
   "dependencies": {
-    "app-builder-lib": "0.0.5",
+    "@cnet/app-builder-lib": "0.0.5",
     "archiver": "^5.3.0",
-    "builder-util": "0.0.5",
+    "@cnet/builder-util": "0.0.5",
     "fs-extra": "^10.0.0"
   },
   "optionalDependencies": {
